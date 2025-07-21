@@ -23,6 +23,7 @@
 
 - JavaScript (Node.js)
 - Java
+- Python
 
 ---
 
