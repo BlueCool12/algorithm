@@ -11,9 +11,8 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+        String a = st.nextToken();        
 
-        P10869_사칙연산.calc(a, b);
+        P11654_아스키코드.getCode(a);
     }
 }
