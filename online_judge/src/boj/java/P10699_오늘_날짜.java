@@ -1,5 +1,3 @@
-package boj.java;
-
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
