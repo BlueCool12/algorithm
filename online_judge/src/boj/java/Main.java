@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -11,8 +10,8 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int t = Integer.parseInt(br.readLine());
-        
-        
+        String word = br.readLine();
+
+        P10809_알파벳_찾기.get(word);
     }
 }
