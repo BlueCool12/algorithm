@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -10,8 +11,15 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String word = br.readLine();
+        String[] line = br.readLine().split(" ");
 
-        P10809_알파벳_찾기.get(word);
+        int n = Integer.parseInt(line[0]);
+        int m = Integer.parseInt(line[1]);
+
+        int[] cards = Arrays.stream(br.readLine().split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
+
+        P2798_블랙잭.sumOfThree(n, m, cards);
     }
 }
