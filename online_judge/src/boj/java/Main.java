@@ -8,13 +8,13 @@ public class Main {
         FileInputStream fis = new FileInputStream(basePath + "/online_judge/src/boj/java/input.txt");
         System.setIn(fis);
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String line;
-        while ((line = br.readLine()) != null) {
-            if (line.equals("0")) break;
+        P10989_수_정렬하기_3.sort(br, bw);
 
-            P1259_팰린드롬수.get(line);
-        }        
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
