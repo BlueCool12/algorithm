@@ -9,12 +9,13 @@ public class Main {
         System.setIn(fis);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        P10989_수_정렬하기_3.sort(br, bw);
+        int M = Integer.parseInt(br.readLine());
+        for (int i = 0; i < M; i++) {
+            P11723_집합.calc(br.readLine());
+        }
 
-        bw.flush();
-        bw.close();
-        br.close();
+        System.out.println(P11723_집합.getResult().trim());
     }
 }
