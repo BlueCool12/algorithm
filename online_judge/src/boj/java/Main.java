@@ -9,9 +9,9 @@ public class Main {
         System.setIn(fis);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        P10989_수_정렬하기_3.sort(br, bw);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        
+        
+        
 
         bw.flush();
         bw.close();
