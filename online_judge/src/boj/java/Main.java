@@ -9,16 +9,8 @@ public class Main {
         System.setIn(fis);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        
 
-        while (true) {
-            String line = br.readLine();
-
-            if (!line.equals("#")) {
-                System.out.println(P1264_모음의_개수.get(line));
-            } else {
-                return;
-            }
-        }
+        P28074_모비스.isGenerate(br.readLine().trim());
     }
 }
