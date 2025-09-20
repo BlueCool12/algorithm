@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -10,7 +11,11 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        
+        
+        int[] bottles = Arrays.stream(br.readLine().trim().split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
 
-        P28074_모비스.isGenerate(br.readLine().trim());
+        P21300_Bottle_Return.refund(bottles);
     }
 }
