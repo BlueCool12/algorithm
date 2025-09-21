@@ -12,10 +12,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        
         
-        int[] bottles = Arrays.stream(br.readLine().trim().split(" "))
+        int[] chocolate = Arrays.stream(br.readLine().trim().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-        P21300_Bottle_Return.refund(bottles);
+        P2163_초콜릿_자르기.split(chocolate);
     }
 }
