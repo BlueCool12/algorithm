@@ -11,8 +11,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String word1 = br.readLine().trim();
-        String word2 = br.readLine().trim();
-        P1919_애너그램_만들기.get(word1, word2);
+        String[] test = br.readLine().split(" ");
+        int N = Integer.parseInt(test[0]);
+        int K = Integer.parseInt(test[1]);
+
+        P1158_요세푸스_문제.get(N, K);
     }
 }
