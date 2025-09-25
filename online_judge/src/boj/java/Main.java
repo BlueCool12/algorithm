@@ -11,6 +11,11 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        
 
-        P5338_마이크로소프트_로고.paint();
+        int N = Integer.parseInt(br.readLine().trim());
+        int[] fans = new int[N];
+        for (int i = 0; i < N; i++) {
+            fans[i] = Integer.parseInt(br.readLine().trim());
+        }
+        P3015_오아시스_재결합.getPair(fans);
     }
 }
