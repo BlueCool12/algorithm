@@ -12,10 +12,12 @@ public class Main {
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine().trim());
-        String[] commands = new String[N];
+        String[] lines = new String[N];
 
         for (int i = 0; i < N; i++) {
-            commands[i] = br.readLine().trim();
-        }        
+            lines[i] = br.readLine().trim();
+        }
+
+        P10866_덱.process(lines);
     }
 }
