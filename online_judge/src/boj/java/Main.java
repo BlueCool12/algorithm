@@ -11,13 +11,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int N = Integer.parseInt(br.readLine().trim());
-        String[] lines = new String[N];
-
-        for (int i = 0; i < N; i++) {
-            lines[i] = br.readLine().trim();
+        int T = Integer.parseInt(br.readLine().trim());
+        for (int i = 0; i < T; i++) {
+            int N = Integer.parseInt(br.readLine().trim());
+            String[] schools = new String[N];
+            for (int j = 0; j < N; j++) {
+                schools[j] = br.readLine().trim();
+            }
+            P11557_Yangjojang_of_The_Year.top(schools);
         }
-
-        P10866_덱.process(lines);
     }
 }

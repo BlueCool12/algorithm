@@ -1,16 +1,8 @@
-15
-push_back 1
-push_front 2
-front
-back
-size
-empty
-pop_front
-pop_back
-pop_front
-size
-empty
-pop_back
-push_front 3
-empty
-front
+2
+3
+Yonsei 10
+Korea 10000000
+Ewha 20
+2
+Yonsei 1
+Korea 10000000
