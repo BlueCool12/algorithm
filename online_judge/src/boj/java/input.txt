@@ -1,8 +1,2 @@
-2
-3
-Yonsei 10
-Korea 10000000
-Ewha 20
-2
-Yonsei 1
-Korea 10000000
+1
+ABABBBBBBBABBABABA
