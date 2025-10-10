@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -11,12 +12,21 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int N = Integer.parseInt(br.readLine().trim());
-        String[] words = new String[N];
-        for (int i = 0; i < N; i++) {
-            words[i] = br.readLine().trim();
+        int[] imageSize = Arrays.stream(br.readLine().trim().split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
+
+        int[][] image = new int[imageSize[0]][imageSize[1]];
+
+        for (int i = 0; i < imageSize[0]; i++) {
+            int[] dot = Arrays.stream(br.readLine().trim().split(" "))
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
+            for (int j = 0; j < imageSize[1]; j++) {
+                image[i][j] = dot[j];
+            }
         }
 
-        P3986_좋은_단어.count(words);
+        P1926_그림.get(imageSize[0], imageSize[1], image);
     }
 }
