@@ -12,21 +12,21 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int[] imageSize = Arrays.stream(br.readLine().trim().split(" "))
+        int[] boxSize = Arrays.stream(br.readLine().trim().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-        int[][] image = new int[imageSize[0]][imageSize[1]];
+        int[][] tomatoBox = new int[boxSize[1]][boxSize[0]];
 
-        for (int i = 0; i < imageSize[0]; i++) {
+        for (int i = 0; i < boxSize[1]; i++) {
             int[] dot = Arrays.stream(br.readLine().trim().split(" "))
                     .mapToInt(Integer::parseInt)
                     .toArray();
-            for (int j = 0; j < imageSize[1]; j++) {
-                image[i][j] = dot[j];
+            for (int j = 0; j < boxSize[0]; j++) {
+                tomatoBox[i][j] = dot[j];
             }
         }
 
-        P1926_그림.get(imageSize[0], imageSize[1], image);
+        P7576_토마토.get(boxSize[0], boxSize[1], tomatoBox);
     }
 }
