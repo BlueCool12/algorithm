@@ -11,12 +11,9 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int T = Integer.parseInt(br.readLine().strip());
-
-        for (int i = 0; i < T; i++) {
-            String type = br.readLine().strip().split(" ")[1];
-            String test = br.readLine().strip();            
-            P12778_CTP공국으로_이민_가자.get(type, test);
-        }
+        int N = Integer.parseInt(br.readLine().strip());        
+        P11729_하노이_탑_이동_순서.hanoi(N, 1, 2, 3);
+        System.out.println(P11729_하노이_탑_이동_순서.count);
+        System.out.println(P11729_하노이_탑_이동_순서.sb.toString());
     }
 }
