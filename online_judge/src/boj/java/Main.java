@@ -11,9 +11,8 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int N = Integer.parseInt(br.readLine().strip());        
-        P11729_하노이_탑_이동_순서.hanoi(N, 1, 2, 3);
-        System.out.println(P11729_하노이_탑_이동_순서.count);
-        System.out.println(P11729_하노이_탑_이동_순서.sb.toString());
+        String line = br.readLine().strip();
+
+        P1541_잃어버린_괄호.calc(line);
     }
 }
