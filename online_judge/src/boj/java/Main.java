@@ -13,6 +13,6 @@ public class Main {
 
         String line = br.readLine().strip();
 
-        P1541_잃어버린_괄호.calc(line);
+        P31844_창고지기.count(line);
     }
 }
