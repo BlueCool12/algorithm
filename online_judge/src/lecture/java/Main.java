@@ -13,6 +13,9 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        S1_8_유효한_팰린드롬.isPalindrome(br.readLine().strip());
+        String n = br.readLine().strip();
+        String str = br.readLine().strip();        
+        String answer = S1_12_암호.solution(Integer.parseInt(n), str);
+        System.out.println(answer);
     }
 }
