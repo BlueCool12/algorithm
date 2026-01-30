@@ -1,6 +1,7 @@
 package lecture.java;
 
 import java.io.*;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -14,8 +15,7 @@ public class Main {
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String n = br.readLine().strip();
-        String str = br.readLine().strip();        
-        String answer = S1_12_암호.solution(Integer.parseInt(n), str);
-        System.out.println(answer);
+        int[] arr = Stream.of(br.readLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
+        S2_6_뒤집은_소수.solution(Integer.parseInt(n), arr);
     }
 }
