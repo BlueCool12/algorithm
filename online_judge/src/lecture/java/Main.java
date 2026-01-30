@@ -13,8 +13,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String str = br.readLine().strip();        
-
-        System.out.println(S1_3_문장_속_단어.find(str));
+        S1_8_유효한_팰린드롬.isPalindrome(br.readLine().strip());
     }
 }
