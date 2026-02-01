@@ -1,7 +1,6 @@
 package lecture.java;
 
 import java.io.*;
-import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -14,8 +13,17 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String n = br.readLine().strip();
-        int[] arr = Stream.of(br.readLine().strip().split(" ")).mapToInt(Integer::parseInt).toArray();
-        S2_6_뒤집은_소수.solution(Integer.parseInt(n), arr);
+        int n = Integer.parseInt(br.readLine().strip());
+
+        int[][] arr = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            String[] line = br.readLine().strip().split(" ");
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = Integer.parseInt(line[j]);
+            }
+        }
+
+        int answer = S2_9_격자판_최대합.solution(n, arr);
+        System.out.println(answer);
     }
 }
