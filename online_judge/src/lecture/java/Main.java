@@ -23,7 +23,6 @@ public class Main {
             }
         }
 
-        int answer = S2_9_격자판_최대합.solution(n, arr);
-        System.out.println(answer);
+        S2_10_봉우리.solution(n, arr);
     }
 }
