@@ -12,17 +12,5 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        int n = Integer.parseInt(br.readLine().strip());
-
-        int[][] arr = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            String[] line = br.readLine().strip().split(" ");
-            for (int j = 0; j < n; j++) {
-                arr[i][j] = Integer.parseInt(line[j]);
-            }
-        }
-
-        S2_10_봉우리.solution(n, arr);
     }
 }
