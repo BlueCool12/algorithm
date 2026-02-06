@@ -4,37 +4,40 @@ class S2_12_멘토링 {
     public static void solution(int n, int m, int[][] arr) {
         int answer = 0;
 
-        // 학생 수 * 학생 수 (경우의 수)
+        // 학생 * 학생 경우의 수
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                // 각 시험 통과 카운트
-                int cnt = 0;
+                // 같은 학생이면 continue
+                if (i == j) continue;
 
-                // k = 시험 수
-                for (int k = 0; k < m; k++) {
+                // 각 시험 통과 횟수
+                int count = 0;
+
+                // t = 시험 수
+                for (int t = 0; t < m; t++) {                    
                     int mentor = 0, mentee = 0;
 
-                    // s = 각 시험의 등수
-                    for (int s = 0; s < n; s++) {
-                        if (arr[k][s] == i) {
-                            mentor = s;
+                    // g = 등수
+                    for (int g = 0; g < n; g++) {
+                        // 각 시험의 등수가 i번 학생이면
+                        if (arr[t][g] == i) {
+                            mentor = g;
                         }
 
-                        if (arr[k][s] == j) {
-                            mentee = s;
+                        // 각 시험의 등수가 j번 학생이면
+                        if (arr[t][g] == j) {
+                            mentee = g;
                         }
-
-                        System.out.println("mentor: " + mentor + " menttee: " + mentee);
                     }
 
-                    // 멘토의 등수가 멘티보다 작으면 (높으면)
-                    if (mentor < mentee) {                        
-                        cnt++;
+                    // i번 학생이 j번 학생보다 등수가 높으면
+                    if (mentor < mentee) {
+                        count++;
                     }
                 }
 
                 // 모든 시험에서 등수가 높으면
-                if (cnt == m) {
+                if (count == m) {
                     answer++;
                 }
             }
