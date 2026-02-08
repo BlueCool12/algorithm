@@ -13,16 +13,16 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String[] line = br.readLine().split(" ");
-        int n = Integer.parseInt(line[0]);
-        int k = Integer.parseInt(line[1]);
+        String[] line1 = br.readLine().strip().split(" ");
+        int n = Integer.parseInt(line1[0]);
+        int k = Integer.parseInt(line1[1]);
 
-        String[] strNums = br.readLine().split(" ");
+        String[] line2 = br.readLine().strip().split(" ");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(strNums[i]);
+            arr[i] = Integer.parseInt(line2[i]);
         }
         
-        S3_3_최대_매출.solution(n, k, arr);
+        S3_6_최대_길이_연속부분수열.solution(n, k, arr);
     }
 }
