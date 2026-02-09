@@ -12,7 +12,7 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
+        
         String[] line1 = br.readLine().strip().split(" ");
         int n = Integer.parseInt(line1[0]);
         int k = Integer.parseInt(line1[1]);
@@ -23,6 +23,6 @@ public class Main {
             arr[i] = Integer.parseInt(line2[i]);
         }
         
-        S3_6_최대_길이_연속부분수열.solution(n, k, arr);
+        S4_5_K번째_큰_수.solution(n, k, arr);
     }
 }
